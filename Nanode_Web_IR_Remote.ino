@@ -1,6 +1,7 @@
 //------------------------------------------------------------------------------------------------------------------------
 // Nanode Web IR Remote Control
-// By Nathan Chantrell http://nathan.chantrell.net
+// By Nathan Chantrell
+// More information on my blog at http://nathan.chantrell.net/20120119/building-a-web-based-infrared-remote-control/
 //
 // Web server based on EtherCard version of RESTduino by Andrew D Lindsay http://blog.thiseldo.co.uk
 //------------------------------------------------------------------------------------------------------------------------
@@ -58,19 +59,21 @@ uint16_t print_webpage()
     "Content-Type: text/html\r\n"
     "Pragma: no-cache\r\n"
     "\r\n"
-    "<html><body><h1>Nanode Web IR Remote control</h1>"
-    "<a href=\"/0\">Power on/off</a><br><br>"
-    "<b>Station presets</b><br>"
-    "<a href=\"/1\">(1) BBC Radio 1</a><br>"
-    "<a href=\"/2\">(2) BBC Radio 2</a><br>"
-    "<a href=\"/3\">(3) BBC Radio 3</a><br>"
-    "<a href=\"/4\">(4) BBC Radio 4</a><br>"
-    "<a href=\"/5\">(5) BBC Radio 5 Live</a><br>"
-    "<a href=\"/6\">(6) BBC 6 Music</a><br>"
-    "<a href=\"/7\">(7) BBC Radio 4 Extra</a><br>"
-    "<a href=\"/8\">(8) TalkSport</a><br>"
-    "<a href=\"/9\">(9) Key 103</a><br>"
-    "<a href=\"/10\">(10) Absolute Radio</a><br>"
+    "<html><head><title>IR Remote control</title>"
+    "<meta name=\"viewport\" content=\"width=device-width;\">"
+    "<link rel=\"stylesheet\" href=\"http://zorg.org/webremote.css\" type=\"text/css\"></head>"
+    "<body><a href=\"/0\">Power on/off</a><br>"
+    "<h2>Station presets</h2>"
+    "<a href=\"/1\">BBC Radio 1</a><br>"
+    "<a href=\"/2\">BBC Radio 2</a><br>"
+    "<a href=\"/3\">BBC Radio 3</a><br>"
+    "<a href=\"/4\">BBC Radio 4</a><br>"
+    "<a href=\"/5\">BBC Radio 5 Live</a><br>"
+    "<a href=\"/6\">BBC 6 Music</a><br>"
+    "<a href=\"/7\">BBC Radio 4 Extra</a><br>"
+    "<a href=\"/8\">LBC</a><br>"
+    "<a href=\"/9\">TalkSport</a><br>"
+    "<a href=\"/10\">Absolute Radio</a><br>"
     "</body></html>"));
   return bfill.position();
 }
